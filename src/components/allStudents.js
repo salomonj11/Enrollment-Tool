@@ -4,18 +4,23 @@ import { Link } from 'react-router-dom';
 function AllStudents(props) {
   return (
     <div>
-      {props.students.map((student) => {
-        return (
-          <h1>
-            {student.firstName} {student.lastName}
-          </h1>
-        );
-      })}
+      <h1>ALL STUDENTS!!!</h1>
     </div>
   );
 }
 
 export default AllStudents;
+
+// 1st option
+//  {
+//    props.students.map((student) => {
+//      return (
+//        <h1>
+//          {student.firstName} {student.lastName}
+//        </h1>
+//      );
+//    });
+//  }
 
 // function PracticeLinking(props) {
 //   return (

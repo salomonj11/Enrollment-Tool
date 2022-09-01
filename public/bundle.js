@@ -4316,12 +4316,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function AllStudents(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, props.students.map(function (student) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, student.firstName, " ", student.lastName);
-  }));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "ALL STUDENTS!!!"));
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AllStudents); // function PracticeLinking(props) {
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AllStudents); // 1st option
+//  {
+//    props.students.map((student) => {
+//      return (
+//        <h1>
+//          {student.firstName} {student.lastName}
+//        </h1>
+//      );
+//    });
+//  }
+// function PracticeLinking(props) {
 //   return (
 //     <div>
 //       <h1>

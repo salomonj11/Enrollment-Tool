@@ -4,7 +4,7 @@ const { Campus } = require('../../db').models;
 router.get('/', async (req, res, next) => {
   try {
     const campuses = await Campus.findAll();
-    res.send(campuses);
+    res.json(campuses);
   } catch (err) {
     next(err);
   }

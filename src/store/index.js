@@ -1,16 +1,13 @@
-import { configureStore } from '@reduxjs/toolkit';
-import studentReducer from '../../client/redux/reducers/elStudentReducers';
-import campusReducer from '../../client/redux/reducers/elCampusReducer';
-import reduxLogger from 'redux-logger';
+import thunk from 'redux-thunk';
+import elCampusReducer from './reducers/elCampusReducer';
+import elStudentReducers from './reducers/elStudentReducers';
+import { combineReducers, createStore, applyMiddleware } from 'redux';
 
-const mainStore = configureStore({
-  reducer: {
-    student: studentReducer,
-    campus: campusReducer,
-  },
-  middleware: (getDefaultMiddleware) => {
-    return getDefaultMiddleware().concat(reduxLogger);
-  },
+const rootReducer = combineReducers({
+  students: elStudentReducers,
+  campuses: elCampusReducer,
 });
 
-export default mainStore;
+const store = createStore(rootReducer, applyMiddleware(thunk));
+
+export default store;

@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const { student } = require('../../db/models/student');
+const { Student } = require('../../db').models;
 
 router.get('/', async (req, res, next) => {
   try {
-    const Elstudents = await student.findAll();
-    res.send(Elstudents);
+    const Elstudents = await Student.findAll();
+    res.json(Elstudents);
   } catch (err) {
     next(err);
   }
