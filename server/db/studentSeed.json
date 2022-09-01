@@ -1,0 +1,23 @@
+[
+  {
+    "firstName": "Pumba",
+    "lastName": "Warthog",
+    "email": "Pumba@disney.com'",
+    "gpa": 3.2,
+    "imageUrl": "https://featuredanimation.com/wp-content/uploads/2022/02/Pumba-Disney-Plus-Icon.jpg.webp"
+  },
+  {
+    "firstName": "Lighting",
+    "lastName": "Mcqueen",
+    "email": "lighting_mcqueen@fast.com",
+    "gpa": 3.9,
+    "imageUrl": "https://featuredanimation.com/wp-content/uploads/2022/02/Lightning-McQueen-Disney-Plus-Icon.jpg.webp"
+  },
+  {
+    "firstName": "Buzz",
+    "lastName": "Lightyear",
+    "email": "space_is_awesome@buzz.com",
+    "gpa": 3.95,
+    "imageUrl": "https://featuredanimation.com/wp-content/uploads/2022/02/Buzz-Lightyear-Disney-Plus-Icon.jpg.webp"
+  }
+]
