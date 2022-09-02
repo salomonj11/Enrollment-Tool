@@ -30,8 +30,30 @@ function singleCampusPage() {
 
   return (
     <>
-      <h1>{campus.name}</h1>
-      <p>{campus.description}</p>
+      <section className="oneCampus-header">
+        <div className="mainInformation flex-column center">
+          <h1>{campus.name}</h1>
+          <p>{campus.description}</p>
+        </div>
+        <img src={campus.imageUrl} />
+      </section>
+
+      <h2> Students!</h2>
+      <div className="student-list flex-row center">
+        {campus.students.length
+          ? campus.students.map((student) => {
+              return (
+                <h3 key={student.id}>
+                  <Link to={`/students/${student.id}`}>
+                    {student.lastName}, {student.firstName}
+                  </Link>
+                </h3>
+              );
+            })
+          : 'No students :('}
+      </div>
     </>
   );
 }
+
+export default singleCampusPage;

@@ -1,0 +1,25 @@
+* {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.oneCampus-header img {
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  object-fit: cover;
+  max-width: 500px;
+}
+.oneCampus-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.oneCampus-header > * {
+  flex: 1 1 0;
+  margin: 1.5rem;
+}
+.mainInformation * {
+  margin: 1rem;
+}
+.mainInformation {
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
