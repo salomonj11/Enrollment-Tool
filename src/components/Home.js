@@ -1,5 +1,5 @@
 import React from 'react';
-import backgroundImg from '../../public/assets/disney_plus_logo_1820.png';
+import backgroundImg from '../../public/assets/giphy.gif';
 // import videoBg from '../../public/assets/Clouds - 64759.mp4';
 
 const Home = () => {

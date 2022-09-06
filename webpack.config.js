@@ -31,6 +31,16 @@ module.exports = {
         },
       },
       {
+        test: /\.(gif)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            outputPath: 'images/',
+            name: '[name][hash].[ext]',
+          },
+        },
+      },
+      {
         test: /\.html$/,
         use: {
           loader: 'html-loader',
