@@ -1,11 +1,11 @@
 import thunk from 'redux-thunk';
-import elCampusReducer from './reducers/elCampusReducer';
-import elStudentReducers from './reducers/elStudentReducers';
+import CampusReducer from './reducers/CampusReducer';
+import StudentReducer from './reducers/StudentReducer';
 import { combineReducers, createStore, applyMiddleware } from 'redux';
 
 const rootReducer = combineReducers({
-  students: elStudentReducers,
-  campuses: elCampusReducer,
+  students: StudentReducer,
+  campuses: CampusReducer,
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk));

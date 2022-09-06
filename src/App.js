@@ -1,40 +1,43 @@
-import React, { useState, useEffect } from 'react';
-import Axios from 'axios';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import {
+  Home,
+  Nav,
+  AllCampuses,
+  AllStudents,
+  SingleCampusPage,
+  SingleStudentPage,
+} from './components';
+import { getCampuses } from './store/reducers/CampusReducer';
+import { getStudents } from './store/reducers/StudentReducer';
 import { Routes, Route, Link } from 'react-router-dom';
-import { allStudents } from '../client/components/allStudents';
-import { allTheCampuses } from '../client/components/allTheCampuses';
 
 function App() {
-  const [students, setStudents] = useState([]);
-  const [campuses, setCampuses] = useState([]);
+  const dispatch = useDispatch();
 
+  //Load campuses and students on app load
   useEffect(() => {
-    async function getEverything() {
-      const campuses = await Axios.get('/campuses');
-      const students = await Axios.get('/students');
-      setCampuses(campuses.data);
-      setStudents(students.data);
-    }
-    getEverything();
+    dispatch(getCampuses());
+    dispatch(getStudents());
   }, []);
 
   return (
-    <div>
-      <nav>
-        <Link to="/campuses">Campuses</Link>
-        <Link to="/students">Students</Link>
-      </nav>
+    <>
+      <Nav />
       <Routes>
+        <Route index element={<Home />} />
+        <Route path="campuses" element={<AllCampuses />} />
+        <Route path="students" element={<AllStudents />} />
         <Route
-          path="/students"
-          element={<allStudents students={students} />}
+          path="campuses/:campusId"
+          element={<SingleCampusPage />}
         />
         <Route
-          path="/campuses"
-          element={<allTheCampuses campuses={campuses} />}
+          path="students/:studentId"
+          element={<SingleStudentPage />}
         />
       </Routes>
-    </div>
+    </>
   );
 }
 

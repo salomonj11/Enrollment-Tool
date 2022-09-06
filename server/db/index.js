@@ -4,39 +4,19 @@
 const db = require('./database');
 const Student = require('./models/student');
 const Campus = require('./models/campus');
-const campusSeed = require('./campusSeed.json');
-const studentSeed = require('./studentSeed.json');
+const seed = require('./seed');
 
 Campus.hasMany(Student);
 Student.belongsTo(Campus);
 
 const syncAndSeed = async () => {
   await db.sync({ force: true });
-
-  //use this area to sync your database
-
-  await Promise.all(
-    campusSeed.map((campus) => {
-      return Campus.create(campus);
-    })
-  );
-
-  await Promise.all(
-    studentSeed.map((student) => {
-      return Student.create(student);
-    })
-  );
-
-  console.log(`
-    Seeding successful!
-  `);
+  seed();
 };
+
 module.exports = {
-  // Include your models in this exports object as well!
   db,
   syncAndSeed,
-  models: {
-    Student,
-    Campus,
-  },
+  Student,
+  Campus,
 };
