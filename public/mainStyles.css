@@ -1,46 +1,21 @@
 * {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-.oneCampus-header img {
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  object-fit: cover;
-  max-width: 500px;
-}
-.oneCampus-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.oneCampus-header > * {
-  flex: 1 1 0;
-  margin: 1.5rem;
-}
-.mainInformation * {
-  margin: 1rem;
-}
-.mainInformation {
-  border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-* {
   font-family: 'Montserrat', sans-serif;
 }
 body {
-  color: #ffffff;
+  color: #353535;
   line-height: 2rem;
-  background-color: #1f1d16;
+  background-color: #fffcf2;
   margin: 0;
 }
 h1 {
   line-height: 3rem;
 }
 button {
-  background-color: #0e0b14;
+  background-color: #3c6e71;
   font-weight: 600;
   cursor: pointer;
   padding: 8px;
-  border: 2px solid #ffffff;
+  border: 2px solid #353535;
   border-radius: 5px;
   color: #d9d9d9;
 }
@@ -53,12 +28,12 @@ ul {
   margin-top: -1rem;
 }
 nav {
-  background-color: #0e0b14;
+  background-color: #284b63;
   display: flex;
   justify-content: space-evenly;
 }
 nav * {
-  color: #ffffff;
+  color: #d9d9d9;
   font-weight: 600;
   text-decoration: none;
   font-size: 1.5rem;
@@ -69,7 +44,6 @@ a:hover {
   transition: 200ms;
 }
 .home {
-  height: auto;
   display: flex;
   text-align: center;
   padding: 2rem;
@@ -120,7 +94,7 @@ input.checkbox {
 }
 a {
   text-decoration: none;
-  color: #ffffff;
+  color: #3c6e71;
 }
 .list-item button:hover,
 .enrollees button:hover {
@@ -138,10 +112,6 @@ a {
 .single-header > * {
   margin: 1rem;
   flex: 1 1 0;
-}
-.homeImage {
-  width: 900px;
-  height: auto;
 }
 .single-header img {
   object-fit: cover;
@@ -189,7 +159,7 @@ a {
   align-items: center;
   text-align: center;
   flex: 1 1 0;
-  background-color: #0e0b14;
+  background-color: #284b63;
   padding: 1.5rem;
   margin: 1rem;
   border-radius: 10px;
@@ -227,6 +197,26 @@ a {
 }
 .form button:hover {
   background-color: #a7c957;
-  color: #ffffff;
+  color: #353535;
   transition: 200ms;
+}
+@media (max-width: 700px) {
+  main,
+  nav,
+  .single-header {
+    flex-direction: column;
+  }
+  nav {
+    align-items: center;
+    justify-content: center;
+  }
+  nav * {
+    margin: 0.25rem;
+  }
+  .single-page form {
+    min-width: 300px;
+  }
+  .single-header img {
+    max-width: 350px;
+  }
 }

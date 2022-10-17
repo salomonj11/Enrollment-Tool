@@ -31,17 +31,17 @@ function SingleCampusPage() {
 
   return (
     <>
-      <section className="oneCampus-header">
-        <div className="mainInformation flex-column center">
+      <section className="single-header">
+        <div className="info flex-column center">
           <h1>{campus.name}</h1>
           <p>{campus.description}</p>
         </div>
-        <img src={campus.imageUrl} />
+        <img id="campusPic" src={campus.imageUrl} />
       </section>
 
       <div className="enrollees flex-column">
         <h2> Students:</h2>
-        <div className="student-list flex-row center">
+        <div className="enrollee-list flex-row center">
           {campus.students.length
             ? campus.students.map((student) => {
                 return (
