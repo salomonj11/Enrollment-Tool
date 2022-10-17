@@ -10,7 +10,6 @@ Key Features:
 <li>Precise form validation</li>
 </ul>
 
-˝
 ## Getting Started
 ### Local Machine (command line)
 - <code>$npm i</code>
