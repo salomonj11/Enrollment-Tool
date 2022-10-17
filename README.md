@@ -35,5 +35,5 @@ For this project, I used:
 ## What I Learned
 - I became much more comfortable with linking up an entire application from front to back end.
 - I learned the wonders of CSS preprocessors and how they can make your life much easier!
-- How important it is to pace yourself during a long project to prevent burn out. Frequent breaks make for a productive developer! :-)
+- How important it is to pace yourself during a long project to prevent burn out. Frequent breaks make for a productive developer! :D
 
